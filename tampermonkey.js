@@ -100,7 +100,7 @@
                        node.hasAttribute('data-tex');
             },
             replacement: (content, node) => {
-                const formula = node.getAttribute('data-tex');
+                const formula = node.getAttribute('data-tex').trim();
                 if (formula.includes('\\tag')) {
                     return `\n$$${formula}$$\n`;
                 } else {
